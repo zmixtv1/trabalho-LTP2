@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#accordion" ).accordion();
+        });
+    </script>
+    <link rel="stylesheet" href="../static/style.css">
+
+    <title>Pizza Delicious</title>
+</head>
+<body>
+    <header>
+        <a href="./Home.html"><img src="../static/imgs/logo.png" alt="logo"></a>
+        <nav class="menu">
+            <ul class="menu">
+                <li>
+                    <a href="./Home.html">Home</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="./encomendar.html">Encomendar</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="home">
+        <h1>Bem Vindo a Pizza Delicious</h1>
+    </div>
+        <section>
+            <div class="sobre" id="sobre">
+                <h3>Sobre</h3>
+                <p>O melhor rodízio de pizzas e o consagrado delivery são as especialidades da Pizza Delicious, com foco na dedicação absoluta à qualidade dos seus produtos. O prestígio adquirido, no curso das suas atividades, decorre do empenho incansável e do profissionalismo da sua equipe na arte do bem servir.
+                </p>
+                <p>As Centrais de Delivery encontram-se devidamente equipadas para sempre prestar atendimento personalizado à sua clientela, além de oferecer um cardápio com ampla variedade de sabores premium, onde também o cliente tem a opção de pedir a sua pizza pelo nosso site. Mas lembre-se: as melhores promoções do delivery são exclusivas para pedidos via internet. Sem dúvidas, a maneira mais prática e rápida para fazer o seu pedido. Peça já a sua.
+                </p>
+                <p>O nosso rodízio conta com a maior variedade e qualidade de sabores premium das consagradas pizzas constantes do nosso cardápio. Venha se deliciar e explorar os nossos sabores exclusivos.
+                Estamos em franca expansão nacional pelo sistema de Franchising, constantemente pesquisando e selecionando novos sabores, serviços e processos, para trazer aos nossos clientes as mais saborosas pizzas, com o melhor custo benefício e atendimento do mercado.
+                </p>
+            </div>
+            <div>
+                <h3>Cardápio</h3>
+                <div id="accordion">
+                    {{ dados | safe }}  <!--  comando para o python  -->
+                    <!--<h3>Calabresa</h3>
+                    <div>
+                        <p>
+                        <img src="./imgs/calabresa.jpg" width="150px"alt=""> <br>
+                        Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                        ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                        amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                        odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                        </p>
+                    </div>
+                    <h3>Bacon</h3>
+                    <div>
+                        <p>
+                        <img src="./imgs/bacon.png" width="150px" alt=""> <br>
+                        Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                        purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                        velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                        suscipit faucibus urna.
+                        </p>
+                    </div>
+                    <h3>Frango</h3>
+                    <div>
+                        <p>
+                        Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                        Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                        ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                        lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                        </p>
+                        <ul>
+                        <li>List item one</li>
+                        <li>List item two</li>
+                        <li>List item three</li>
+                        </ul>
+                    </div>
+                    <h3>Portuguesa</h3>
+                    <div>
+                        <p>
+                        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                        mauris vel est.
+                        </p>
+                        <p>
+                        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                        inceptos himenaeos.
+                        </p>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </section>
+            <footer>
+               <div class="content-center">
+                    <div class="opcao">
+                        <h5>Contato</h5>
+                        <div>
+
+                            <p>Redes Sociais</p>
+                            <div class="redes">
+                                <div class="sociais">
+                                    <p>Instagram</p>
+                                    <a href="https://www.instagram.com/?hl=pt-br" target="_blank"><img src="imgs/logo-insta.webp" width="35px" alt=""></a>
+                                </div>
+                                <div class="sociais">
+                                    <p>Facebook</p>
+                                    <a href="https://www.facebook.com/campaign/landing.php?&campaign_id=1661784632&extra_1=s%7Cc%7C320269324047%7Ce%7Cfacebook%7C&placement=&creative=320269324047&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1661784632%26adgroupid%3D63686352403%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D1001541%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQjwqPGUBhDwARIsANNwjV5KOvS6F4fdqzmr8krI7TRBvXoWHh6ZNlioQsf1zYri80LeQ50Xuo8aAm9CEALw_wcB" target="_blank"><img src="imgs/logo-face.png" width="30px" alt=""></a>
+                                </div>
+                                <div class="sociais">
+                                    <p>whatsapp</p>
+                                    <a href="https://api.whatsapp.com/send?phone=5561900001111" target="_blank"><img src="imgs/logo-whats.png" width="23px" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opcao">
+                        <h5>serviços</h5>
+                        <a href="./encomendar.html">Encomendar</a>
+
+                    </div>
+                    <div class="opcao">
+                        <h5>Endereço</h5>
+                        <p>Brasília- Brasil</p>
+                        <p>Uniceub - Asa Norte</p>
+                        <a href="tel:+6100001111">(61)90000-1111</a>
+                        <a href="mailto:pizzadelicious@email.com">pizzadelicious@email.com</a>
+                    </div>
+               </div>
+            </footer>
+</body>
+</html>

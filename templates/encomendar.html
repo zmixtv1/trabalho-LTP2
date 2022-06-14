@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <style>
+    #feedback { font-size: 1.4em; }
+    #selectable .ui-selecting { background: #FECA40; }
+    #selectable .ui-selected { background: #F39814; color: white; }
+    #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+    #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#selectable" ).selectable();
+        });
+
+    </script>
+    <title>Encomendar</title>
+</head>
+<body>
+    <header>
+        <a href="./Home.html"><img src="./imgs/logo.png" alt="logo"></a>
+        <nav class="menu">
+            <ul class="menu">
+                <li>
+                    <a href="./Home.html">Home</a>
+                </li>
+                <li>
+                    <a href="./Home.html#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="./encomendar.html">Encomendar</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="tudo">
+            <form action="">
+                <fieldset>
+                    <legend><b>Fórmulário de Pedido</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelInput">Nome completo</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="email" id="email" class="inputUser" required>
+                        <label for="email" class="labelInput">Email</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                        <label for="telefone" class="labelInput">Telefone</label>
+                    </div>
+                    <br>
+                    <p>Pedido:</p>
+                    <div id="sabor">
+                        <div>
+                            <input type="checkbox" id="calabresa" name="sabor" value="calabresa" required>
+                            <label for="calabresa">Calabresa</label>
+
+                            <br>
+                            <input type="checkbox" id="bacon" name="sabor" value="bacon" required>
+                            <label for="bacon">Bacon</label>
+
+                            <br>
+                            <input type="checkbox" id="frango" name="sabor" value="frango" required>
+                            <label for="frango">Frango</label>
+
+                            <br>
+                            <input type="checkbox" id="portuguesa" name="sabor" value="portuguesa" required>
+                            <label for="portuguesa">Portuguesa</label>
+                        </div>
+                        <div class="quantidade">
+                            <label for="quantidade1">Quantidade:</label>
+                            <input type="number" name="quantidade1" id="quantidade" min="0" max="5">
+                            <br>
+                            <label for="quantidade1">Quantidade:</label>
+                            <input type="number" name="quantidade1" id="quantidade" min="0" max="5">
+                            <br>
+                            <label for="quantidade1">Quantidade:</label>
+                            <input type="number" name="quantidade1" id="quantidade" min="0" max="5">
+                            <br>
+                            <label for="quantidade1">Quantidade:</label>
+                            <input type="number" name="quantidade1" id="quantidade" min="0" max="5">
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div class="inputBox">
+                        <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                        <label for="endereco" class="labelInput">Endereço</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="mtd_pagamento">Método de Pagamento:</label>
+                        <select name="pagamento" id="pagamento">
+                            <option value="dinheiro">Dinheiro</option>
+                            <option value="pix" selected>Pix</option>
+                            <option value="credito">Maquina credito</option>
+                            <option value="debito">Maquina debito</option>
+                            <option value="vale">vale-refeição</option>
+                        </select>
+
+                    </div>
+                    <br><br>
+                    <input type="submit" name="submit" id="submit">
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="content-center">
+             <div class="opcao">
+                 <h5>Contato</h5>
+                 <div>
+
+                     <p>Redes Sociais</p>
+                     <div class="redes">
+                         <div class="sociais">
+                             <p>Instagram</p>
+                             <a href="https://www.instagram.com/?hl=pt-br" target="_blank"><img src="imgs/logo-insta.webp" width="35px" alt=""></a>
+                         </div>
+                         <div class="sociais">
+                             <p>Facebook</p>
+                             <a href="https://www.facebook.com/" target="_blank"><img src="imgs/logo-face.png" width="30px" alt=""></a>
+                         </div>
+                         <div class="sociais">
+                             <p>whatsapp</p>
+                             <a href="https://api.whatsapp.com/send?phone=5561900001111" target="_blank"><img src="imgs/logo-whats.png" width="23px" alt=""></a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="opcao">
+                 <h5>serviços</h5>
+                 <a href="./encomendar.html">Encomendar</a>
+
+             </div>
+             <div class="opcao">
+                 <h5>Endereço</h5>
+                 <p>Brasília- Brasil</p>
+                 <p>Uniceub - Asa Norte</p>
+                 <a href="tel:+6100001111">(61)90000-1111</a>
+                 <a href="mailto:pizzadelicious@email.com">pizzadelicious@email.com</a>
+             </div>
+        </div>
+     </footer>
+
+</body>
+</html>
