@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="../static/style2.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
 
@@ -27,17 +27,17 @@
 </head>
 <body>
     <header>
-        <a href="./Home.html"><img src="./imgs/logo.png" alt="logo"></a>
+        <a href="./"><img src="../static/imgs/logo.png" alt="logo"></a>
         <nav class="menu">
             <ul class="menu">
                 <li>
-                    <a href="./Home.html">Home</a>
+                    <a href="./">Home</a>
                 </li>
                 <li>
-                    <a href="./Home.html#sobre">Sobre</a>
+                    <a href="./#sobre">Sobre</a>
                 </li>
                 <li>
-                    <a href="./encomendar.html">Encomendar</a>
+                    <a href="./encomendar">Encomendar</a>
                 </li>
             </ul>
         </nav>
@@ -66,6 +66,8 @@
                     <p>Pedido:</p>
                     <div id="sabor">
                         <div>
+                            {{ encomenda | safe }}
+                            <!--
                             <input type="checkbox" id="calabresa" name="sabor" value="calabresa" required>
                             <label for="calabresa">Calabresa</label>
 
@@ -80,20 +82,23 @@
                             <br>
                             <input type="checkbox" id="portuguesa" name="sabor" value="portuguesa" required>
                             <label for="portuguesa">Portuguesa</label>
+                            -->
                         </div>
+                        <!--
                         <div class="quantidade">
                             <label for="quantidade1">Quantidade:</label>
-                            <input type="number" name="quantidade1" id="quantidade" min="0" max="5">
+                            <input type="number" name="quantidade1" id="quantidade1" min="0" max="5">
                             <br>
                             <label for="quantidade1">Quantidade:</label>
-                            <input type="number" name="quantidade1" id="quantidade" min="0" max="5">
+                            <input type="number" name="quantidade2" id="quantidade2" min="0" max="5">
                             <br>
                             <label for="quantidade1">Quantidade:</label>
-                            <input type="number" name="quantidade1" id="quantidade" min="0" max="5">
+                            <input type="number" name="quantidade3" id="quantidade3" min="0" max="5">
                             <br>
                             <label for="quantidade1">Quantidade:</label>
-                            <input type="number" name="quantidade1" id="quantidade" min="0" max="5">
+                            <input type="number" name="quantidade4" id="quantidade4" min="0" max="5">
                         </div>
+                        -->
                     </div>
                     <br><br>
 
@@ -129,22 +134,22 @@
                      <div class="redes">
                          <div class="sociais">
                              <p>Instagram</p>
-                             <a href="https://www.instagram.com/?hl=pt-br" target="_blank"><img src="imgs/logo-insta.webp" width="35px" alt=""></a>
+                             <a href="https://www.instagram.com/?hl=pt-br" target="_blank"><img src="../static/imgs/logo-insta.webp" width="35px" alt=""></a>
                          </div>
                          <div class="sociais">
                              <p>Facebook</p>
-                             <a href="https://www.facebook.com/" target="_blank"><img src="imgs/logo-face.png" width="30px" alt=""></a>
+                             <a href="https://www.facebook.com/" target="_blank"><img src="../static/imgs/logo-face.png" width="30px" alt=""></a>
                          </div>
                          <div class="sociais">
                              <p>whatsapp</p>
-                             <a href="https://api.whatsapp.com/send?phone=5561900001111" target="_blank"><img src="imgs/logo-whats.png" width="23px" alt=""></a>
+                             <a href="https://api.whatsapp.com/send?phone=5561900001111" target="_blank"><img src="../static/imgs/logo-whats.png" width="23px" alt=""></a>
                          </div>
                      </div>
                  </div>
              </div>
              <div class="opcao">
                  <h5>serviços</h5>
-                 <a href="./encomendar.html">Encomendar</a>
+                 <a href="./encomendar">Encomendar</a>
 
              </div>
              <div class="opcao">

@@ -23,7 +23,20 @@ def index():
    return render_template('home.html', dados = dados)
 
 
-
-
+@app.route('/encomendar')
+def encomendar():
+   banco = bd.SQL('root', 'uniceub', 'projeto_final')
+   comando = "SELECT nme_pizza FROM tb_pizza;"
+   cs = banco.consultar(comando, [])
+   encomenda = ""
+   for (nme) in cs:
+      encomenda += '''
+                      <div>
+                          <input type="checkbox" id="{}" name="sabor" value="{}" required>
+                          <label for="{}">{}</label>
+                      </div>
+                   '''.format(nme, nme, nme, nme)
+      encomenda = encomenda.replace("(", "").replace(")", "").replace("'", "").replace(",","")
+   return render_template('encomendar.html', encomenda=encomenda)
 
 app.run(debug=1)
