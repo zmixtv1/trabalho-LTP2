@@ -138,6 +138,13 @@ a{
     border: 1px solid #000000;
 }
 
+.ui-accordion .ui-accordion-content{
+padding:1em 2.2em;
+border-top: 0;
+overflow: auto;
+height:220px;
+}
+
 @media screen and (max-width:1043px){
     .menu{
         display: block;
