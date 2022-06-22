@@ -32,11 +32,17 @@ def encomendar():
    for (nme) in cs:
       encomenda += '''
                       <div>
-                          <input type="checkbox" id="{}" name="sabor" value="{}" required>
+                          <input type="checkbox" id="{}" name="sabor" value="{}" >
                           <label for="{}">{}</label>
                       </div>
                    '''.format(nme, nme, nme, nme)
       encomenda = encomenda.replace("(", "").replace(")", "").replace("'", "").replace(",","")
    return render_template('encomendar.html', encomenda=encomenda)
+
+
+
+@app.route('/cadastrar')
+def cadastrar():
+   return render_template('cadastrar.html', cadastrar=cadastrar)
 
 app.run(debug=1)

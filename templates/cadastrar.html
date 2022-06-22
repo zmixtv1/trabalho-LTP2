@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style2.css">
+    <link rel="stylesheet" href="../static/style3.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
 
@@ -23,7 +23,7 @@
         });
 
     </script>
-    <title>Encomendar</title>
+    <title>Cadastrar</title>
 </head>
 <body>
     <header>
@@ -39,9 +39,6 @@
                 <li>
                     <a href="./encomendar">Encomendar</a>
                 </li>
-                <li>
-                    <a href="./cadastrar">Cadastrar</a>
-                </li>
             </ul>
         </nav>
     </header>
@@ -51,60 +48,25 @@
                 <fieldset>
                     <legend><b>Fórmulário de Pedido</b></legend>
                     <br>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelInput">Nome completo</label>
+                    </div>
                     <br><br>
                     <div class="inputBox">
                         <input type="text" name="email" id="email" class="inputUser" required>
-                        <label for="email" class="labelInput">Email do usuário:</label>
-                    </div>
-                    <br>
-                    <p>Pedido:</p>
-                    <div id="sabor">
-                        <div>
-                            {{ encomenda | safe }}
-                            <!--
-                            <input type="checkbox" id="calabresa" name="sabor" value="calabresa" required>
-                            <label for="calabresa">Calabresa</label>
-
-                            <br>
-                            <input type="checkbox" id="bacon" name="sabor" value="bacon" required>
-                            <label for="bacon">Bacon</label>
-
-                            <br>
-                            <input type="checkbox" id="frango" name="sabor" value="frango" required>
-                            <label for="frango">Frango</label>
-
-                            <br>
-                            <input type="checkbox" id="portuguesa" name="sabor" value="portuguesa" required>
-                            <label for="portuguesa">Portuguesa</label>
-                            -->
-                        </div>
-                        <!--
-                        <div class="quantidade">
-                            <label for="quantidade1">Quantidade:</label>
-                            <input type="number" name="quantidade1" id="quantidade1" min="0" max="5">
-                            <br>
-                            <label for="quantidade1">Quantidade:</label>
-                            <input type="number" name="quantidade2" id="quantidade2" min="0" max="5">
-                            <br>
-                            <label for="quantidade1">Quantidade:</label>
-                            <input type="number" name="quantidade3" id="quantidade3" min="0" max="5">
-                            <br>
-                            <label for="quantidade1">Quantidade:</label>
-                            <input type="number" name="quantidade4" id="quantidade4" min="0" max="5">
-                        </div>
-                        -->
+                        <label for="email" class="labelInput">Email</label>
                     </div>
                     <br><br>
                     <div class="inputBox">
-                        <label for="mtd_pagamento">Método de Pagamento:</label>
-                        <select name="pagamento" id="pagamento">
-                            <option value="dinheiro">Dinheiro</option>
-                            <option value="pix" selected>Pix</option>
-                            <option value="credito">Maquina credito</option>
-                            <option value="debito">Maquina debito</option>
-                            <option value="vale">vale-refeição</option>
-                        </select>
+                        <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                        <label for="telefone" class="labelInput">Telefone</label>
+                    </div>
+                    <br><br>
 
+                    <div class="inputBox">
+                        <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                        <label for="endereco" class="labelInput">Endereço</label>
                     </div>
                     <br><br>
                     <input type="submit" name="submit" class="submit">
