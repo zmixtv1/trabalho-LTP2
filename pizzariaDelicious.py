@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-   banco = bd.SQL('root','uniceub','projeto_final')
+   banco = bd.SQL('root','','projeto_final')
    comando = "SELECT * FROM tb_pizza;"
    cs = banco.consultar(comando, [])
    dados = ""
@@ -25,7 +25,7 @@ def index():
 
 @app.route('/encomendar')
 def encomendar():
-   banco = bd.SQL('root', 'uniceub', 'projeto_final')
+   banco = bd.SQL('root', '', 'projeto_final')
    comando = "SELECT nme_pizza FROM tb_pizza;"
    cs = banco.consultar(comando, [])
    encomenda = ""
