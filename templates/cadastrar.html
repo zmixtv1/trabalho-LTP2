@@ -44,7 +44,8 @@
     </header>
     <section>
         <div class="tudo">
-            <form action="">
+            <form action="/cadastrar" method="post" enctype="multipart/form-data">
+                {{ MSG | safe }}
                 <fieldset>
                     <legend><b>Fórmulário de Pedido</b></legend>
                     <br>

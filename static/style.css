@@ -152,11 +152,19 @@ height:220px;
         padding: 1px;
     }
 
-    .redes{
-        font-size: 15px;
+    .redes p{
+        font-size: 14px;
     }
 
     .content-center{
         display: block;
     }
+}
+
+.img_pz{
+    padding: 10px;
+    background: #b88d4d;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px black;
+    margin-bottom: 10px;
 }

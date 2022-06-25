@@ -47,13 +47,14 @@
     </header>
     <section>
         <div class="tudo">
-            <form action="">
+            <form action="/encomendar" method="post">
+                    {{ MSG | safe }}
                 <fieldset>
                     <legend><b>Fórmulário de Pedido</b></legend>
                     <br>
                     <br><br>
                     <div class="inputBox">
-                        <input type="text" name="email" id="email" class="inputUser" required>
+                        <input type="text" name="email" id="email" class="inputUser" value="{{ valEmail }}" required>
                         <label for="email" class="labelInput">Email do usuário:</label>
                     </div>
                     <br>
@@ -97,12 +98,8 @@
                     <br><br>
                     <div class="inputBox">
                         <label for="mtd_pagamento">Método de Pagamento:</label>
-                        <select name="pagamento" id="pagamento">
-                            <option value="dinheiro">Dinheiro</option>
-                            <option value="pix" selected>Pix</option>
-                            <option value="credito">Maquina credito</option>
-                            <option value="debito">Maquina debito</option>
-                            <option value="vale">vale-refeição</option>
+                        <select name="pagamento" id="pagamento" value="{{ valPag }}">
+                            {{ cbPag | safe }}
                         </select>
 
                     </div>
