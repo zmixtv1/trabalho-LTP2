@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    banco = bd.SQL('root','uniceub','projeto_final')
+    banco = bd.SQL('root','','projeto_final')
     comando = "SELECT * FROM tb_pizza;"
     cs = banco.consultar(comando, [])
     dados = ""
@@ -27,7 +27,7 @@ def index():
 
 @app.route('/encomendar',  methods=['GET', 'POST'])
 def encomendar():
-    banco = bd.SQL('root', 'uniceub', 'projeto_final')
+    banco = bd.SQL('root', '', 'projeto_final')
     msg = ''
     valEmail = ''
     valPag = '1'
@@ -84,7 +84,7 @@ def encomendar():
 
 @app.route('/cadastrar', methods=['GET', 'POST'])
 def cadastrar():
-    banco = bd.SQL('root', 'uniceub', 'projeto_final')
+    banco = bd.SQL('root', '', 'projeto_final')
     cadastrar = ""
     msg = ''
     if request.method == "POST":
