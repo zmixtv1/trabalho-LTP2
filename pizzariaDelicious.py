@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    banco = bd.SQL('root','','projeto_final')
+    banco = bd.SQL('root','Teste','projeto_final')
     comando = "SELECT * FROM tb_pizza;"
     cs = banco.consultar(comando, [])
     dados = ""
@@ -16,7 +16,7 @@ def index():
         dados += '''
                     <h3>{}</h3>
                     <div>
-                        <img src="{}" class="img_pz" width="140px"alt=""> <br>
+                        <img src="static/imgs/{}" class="img_pz" width="140px"alt=""> <br>
                         <p>Pizza -  {}</p>
                         <p>Descrição da Pizza:  {}</p>
                         <p>Valor da Pizza:  {}</p>
@@ -27,7 +27,7 @@ def index():
 
 @app.route('/encomendar',  methods=['GET', 'POST'])
 def encomendar():
-    banco = bd.SQL('root', '', 'projeto_final')
+    banco = bd.SQL('root', 'Teste', 'projeto_final')
     msg = ''
     valEmail = ''
     valPag = '1'
@@ -84,7 +84,7 @@ def encomendar():
 
 @app.route('/cadastrar', methods=['GET', 'POST'])
 def cadastrar():
-    banco = bd.SQL('root', '', 'projeto_final')
+    banco = bd.SQL('root', 'Teste', 'projeto_final')
     cadastrar = ""
     msg = ''
     if request.method == "POST":
