@@ -1,9 +1,16 @@
 import firebase_admin
 from firebase_admin import credentials, db
+import os
+import json
 
-cred = credentials.Certificate("firebase-credentials.json")  # Baixe do console Firebase
+# Carrega as credenciais do Firebase da variável de ambiente
+firebase_json = os.environ.get("FIREBASE_CREDENTIALS")
+cred_dict = json.loads(firebase_json)
+
+# Inicializa o Firebase Admin SDK
+cred = credentials.Certificate(cred_dict)
 firebase_admin.initialize_app(cred, {
-    "databaseURL": "https://pizzariadelicious-default-rtdb.firebaseio.com"
+    "databaseURL": os.environ.get("FIREBASE_DB_URL")
 })
 
 def salvar_dado(path, dados):
